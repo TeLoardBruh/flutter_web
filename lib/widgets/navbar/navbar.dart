@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:playground/widgets/container/deviceType.dart';
 import 'package:playground/widgets/drawer/navDrawer.dart';
 
 import 'narbarLogo.dart';
@@ -7,15 +8,12 @@ import 'navbarItem.dart';
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var s = MediaQuery.of(context).size;
-    // print(s);
-    if (s <= Size(500.0, 711.0) && s >= Size(375.0, 711.0)) {
-      return _NavBarMoblie();
-    } else if (s <= Size(320.0, 711.0)) {
-      return _NavBarMoblieSm();
-    } else {
-      return _NavBarDesktopTab();
-    }
+    
+    return DeviceType(
+      moblie: _NavBarMoblie(),
+      desktoptablet: _NavBarDesktopTab(),
+      tablet: _NavBarDesktopTab(),
+    );
   }
 }
 

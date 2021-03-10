@@ -68,7 +68,6 @@ class _Moblie extends StatelessWidget {
               child: Column(
               children: [
                 WelcomeText(),
-                
                 Expanded(
                     child: Center(
                   child: ButtonCalltoAction('Start !'),
