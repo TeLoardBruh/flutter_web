@@ -10,14 +10,14 @@ class DeviceType extends StatelessWidget {
   Widget build(BuildContext context) {
     var s = MediaQuery.of(context).size;
     print(s);
-    if (s >= Size(500.0, MediaQuery.of(context).size.height) &&
+    if (s >= Size(659.0, MediaQuery.of(context).size.height) &&
         s <= Size(890.0, MediaQuery.of(context).size.height)) {
       print("t");
       return tablet;
       // } else if (s <= Size(320.0, MediaQuery.of(context).size.height)) {
       //   return _NavBarMoblieSm();
       // s <= Size(500.0, 711.0) && s >= Size(375.0, 711.0)
-    } else if (s <= Size(500.0, MediaQuery.of(context).size.height)) {
+    } else if (s <= Size(659.0, MediaQuery.of(context).size.height)) {
       print("m");
       return moblie;
     } else {

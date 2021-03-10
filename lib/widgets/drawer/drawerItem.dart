@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../navbar/navbarItem.dart';
 
-class DrawerAnimation extends StatelessWidget {
+class DrawerItem extends StatelessWidget {
  final String title;
   final IconData icon;
-  const DrawerAnimation(this.title, this.icon);
+  const DrawerItem(this.title, this.icon);
 
   @override
   Widget build(BuildContext context) {

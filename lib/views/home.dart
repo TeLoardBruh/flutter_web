@@ -53,6 +53,7 @@ class _Moblie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    endDrawerEnableOpenDragGesture: false,
       drawer: NavDrawer(),
       backgroundColor: Colors.white,
       body: ContainerView(
@@ -64,7 +65,7 @@ class _Moblie extends StatelessWidget {
               
             ),
             Expanded(
-                child: Column(
+              child: Column(
               children: [
                 WelcomeText(),
                 

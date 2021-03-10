@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:playground/widgets/drawer/navDrawer.dart';
 
-import '../container/deviceType.dart';
 import 'narbarLogo.dart';
 import 'navbarItem.dart';
 
 class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DeviceType(
-      tablet: _NavBarDesktopTab(),
-      desktoptablet: _NavBarDesktopTab(),
-      moblie: _NavBarMoblie(),
-    );
+    var s = MediaQuery.of(context).size;
+    // print(s);
+    if (s <= Size(500.0, 711.0) && s >= Size(375.0, 711.0)) {
+      return _NavBarMoblie();
+    } else if (s <= Size(320.0, 711.0)) {
+      return _NavBarMoblieSm();
+    } else {
+      return _NavBarDesktopTab();
+    }
   }
 }
 
@@ -50,10 +54,13 @@ class _NavBarMoblie extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // IconButton(
-          //   icon: Icon(Icons.menu),
-          //   onPressed: () {},
-          // ),
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
+          // NavDrawer(),
           NavBarLogo()
         ],
       ),
