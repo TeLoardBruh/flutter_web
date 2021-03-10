@@ -4,7 +4,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("About Page"),
+      child: Center(child: Text("About Page")),
     );
   }
 }

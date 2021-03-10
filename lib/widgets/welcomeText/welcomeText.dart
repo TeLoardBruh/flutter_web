@@ -5,7 +5,6 @@ import '../container/deviceType.dart';
 class WelcomeText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
     return DeviceType(
       desktoptablet: _WelcomeTextDeskTop(),
       moblie: _WelcomeTextMoblie(),
@@ -75,6 +74,7 @@ class _WelcomeTextMoblie extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 600,
+      margin: EdgeInsets.all(50),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -82,14 +82,14 @@ class _WelcomeTextMoblie extends StatelessWidget {
           Text(
             "Welcome to Flutter web",
             textAlign: TextAlign.center,
-            style: TextStyle(fontWeight: FontWeight.w800, height: 0.9,fontSize: 50),
+            style: TextStyle(fontWeight: FontWeight.w800, height: 0.9,fontSize: 80),
           ),
           SizedBox(
             height: 30,
           ),
           Text(
             "Flutter is an open-source UI software development kit created by Google. It is used to develop applications for Android, iOS, Linux, Mac, Windows, Google Fuchsia, and the web from a single codebase. ",
-            style: TextStyle(fontSize: 16, height: 1.7),
+            style: TextStyle(fontSize: 18, height: 1.7),
           )
         ],
       ),

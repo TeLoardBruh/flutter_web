@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:playground/locator.dart';
+import 'package:playground/routing/route.dart';
+import 'package:playground/routing/route_name.dart';
+import 'package:playground/services/navigationService.dart';
+import 'package:playground/views/home/homeDeskTop.dart';
+import 'package:playground/views/home/homeMoblie.dart';
+import 'package:playground/views/home/homeTablet.dart';
 import 'package:playground/widgets/buttonCalltoAction/buttonCalltoAction.dart';
 import 'package:playground/widgets/container/container.dart';
 import 'package:playground/widgets/container/deviceType.dart';
@@ -10,9 +17,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DeviceType(
-      desktoptablet: _DesktopTab(),
-      tablet: _Tablet(),
-      moblie: _Moblie(),
+      desktoptablet: HomeDeskTop(),
+      tablet: HomeTablet(),
+      moblie: HomeMoblie(),
       // moblie: _Moblie(),
     );
   }
